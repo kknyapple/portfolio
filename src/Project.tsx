@@ -2,17 +2,26 @@ import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-const Page2 = styled(motion.h1)`
+const Title = styled.h1`
   font-family: "Montserrat";
   text-align: center;
-
   color: white;
+  font-size: 45px;
+`;
+
+const Page2 = styled(motion.h2)`
+  font-family: "Montserrat";
+  text-align: center;
+  color: white;
+  font-size: 28px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
 `;
 
 const Grid = styled.div`
@@ -32,10 +41,24 @@ const Box = styled(motion.div)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
-const clickedBox = styled(motion.div)`
-  width: 500px;
-  height: 500px;
-  color: white;
+const Content = styled.p`
+  font-family: "gulim";
+  font-weight: bold;
+  font-size: 20px;
+`;
+
+const GithubBtn = styled.button`
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  width: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #4e4e4e;
 `;
 
 const Overlay = styled(motion.div)`
@@ -55,10 +78,9 @@ const overlay = {
 
 function Project() {
   const [id, setId] = useState<number | null>(null);
-  const [clicked, setClicked] = useState(false);
-  const toggleClicked = () => setClicked((prev) => !prev);
   return (
     <>
+      <Title>Projects</Title>
       <Wrapper>
         <Grid>
           <Box
@@ -69,7 +91,7 @@ function Project() {
           >
             <Page2>
               포트폴리오 사이트
-              <br></br>#react-fullpage
+              <br></br>#풀페이지
             </Page2>
           </Box>
           <Box
@@ -117,15 +139,20 @@ function Project() {
                     width: 700,
                     height: 500,
                     backgroundColor: "white",
+                    marginBottom: 50,
                   }}
                 >
-                  <div>
-                    포트폴리오 사이트
-                    <br></br>
+                  <Content>
+                    👉 포트폴리오 사이트
+                    <br />
+                    <br />
                     <img src="img/1.jpg" style={{ width: 600 }} />
-                    <br></br>
-                    <a href="https://github.com/">Github</a>
-                  </div>
+                    <br />
+                    <br />
+                    <GithubBtn>
+                      <a href="https://github.com/">Github</a>
+                    </GithubBtn>
+                  </Content>
                 </Box>
               ) : id === 2 ? (
                 <Box
@@ -134,8 +161,21 @@ function Project() {
                     width: 700,
                     height: 500,
                     backgroundColor: "white",
+                    marginBottom: 50,
                   }}
-                />
+                >
+                  <Content>
+                    👉 포켓몬 도감
+                    <br />
+                    <br />
+                    <img src="img/2.jpg" style={{ width: 600 }} />
+                    <br />
+                    <br />
+                    <GithubBtn>
+                      <a href="https://github.com/">Github</a>
+                    </GithubBtn>
+                  </Content>
+                </Box>
               ) : id === 3 ? (
                 <Box
                   layoutId="3"
@@ -143,6 +183,7 @@ function Project() {
                     width: 700,
                     height: 500,
                     backgroundColor: "white",
+                    marginBottom: 50,
                   }}
                 ></Box>
               ) : id === 4 ? (
@@ -152,6 +193,7 @@ function Project() {
                     width: 700,
                     height: 500,
                     backgroundColor: "white",
+                    marginBottom: 50,
                   }}
                 ></Box>
               ) : null}

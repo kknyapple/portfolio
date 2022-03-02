@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Page3 = styled.h1`
+const Title = styled.h1`
   font-family: "Montserrat";
   text-align: center;
   color: white;
+  font-size: 45px;
+`;
+
+const Page3 = styled.h2`
+  font-family: "Montserrat";
+  text-align: center;
+  color: white;
+  font-size: 28px;
 `;
 
 const Wrapper = styled.div`
@@ -13,6 +21,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
+  padding-bottom: 120px;
 `;
 
 const Round = styled(motion.div)`
@@ -24,23 +34,26 @@ const Round = styled(motion.div)`
   height: 120px;
   width: 355px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
-  margin: 5px;
+  //padding-top: px;
+  margin-left: 12px;
+  margin-right: 12px;
 `;
 
 function Contact() {
   return (
     <>
+      <Title>Contact Me!</Title>
       <Wrapper>
-        <Round>
+        <Round whileHover={{ scale: 1.08 }}>
           <Page3>✉Email kknyapple@gmail.com</Page3>
         </Round>
-        <Round>
+        <Round whileHover={{ scale: 1.08 }}>
           <Page3>
             📌
             <a href="https://github.com/">Github</a>
           </Page3>
         </Round>
-        <Round>
+        <Round whileHover={{ scale: 1.08 }}>
           <Page3>📄blog</Page3>
         </Round>
       </Wrapper>

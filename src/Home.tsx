@@ -9,16 +9,18 @@ const Page1 = styled(motion.h1)`
   align-items: center;
   color: white;
   font-size: 5em;
-  font-weight: 700;
+  //font-weight: 700;
 `;
 
 function Home() {
   return (
-    <Page1 whileHover={{ scale: 1.2 }}>
-      Kim Na Yeon,
-      <br></br>
-      FRONTEND DEVELOPER
-    </Page1>
+    <>
+      <Page1 whileHover={{ scale: 1.1 }}>
+        Kim Na Yeon,
+        <br></br>
+        FRONTEND DEVELOPER
+      </Page1>
+    </>
   );
 }
 

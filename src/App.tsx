@@ -34,10 +34,10 @@ const FullpageWrapper = (fullpageProps) => (
       //console.log("render prop change", state); // eslint-disable-line no-console
       return (
         <div>
-          <div id="header">
-            <Header></Header>
-          </div>
           <div id="fullpage-wrapper">
+            <div id="header">
+              <Header></Header>
+            </div>
             <div className="section">
               <Home></Home>
             </div>
