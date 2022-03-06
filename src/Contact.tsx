@@ -48,13 +48,22 @@ function Contact() {
           <Page3>✉Email kknyapple@gmail.com</Page3>
         </Round>
         <Round whileHover={{ scale: 1.08 }}>
-          <Page3>
-            📌
-            <a href="https://github.com/">Github</a>
+          <Page3
+            onClick={() =>
+              window.open("https://github.com/kknyapple", "_blank")
+            }
+            style={{ cursor: "pointer" }}
+          >
+            📌 Github
           </Page3>
         </Round>
         <Round whileHover={{ scale: 1.08 }}>
-          <Page3>📄blog</Page3>
+          <Page3
+            onClick={() => window.open("https://naon0.tistory.com/", "_blank")}
+            style={{ cursor: "pointer" }}
+          >
+            📄Blog
+          </Page3>
         </Round>
       </Wrapper>
     </>

@@ -59,6 +59,8 @@ const GithubBtn = styled.button`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   background-color: #4e4e4e;
+  color: white;
+  cursor: pointer;
 `;
 
 const Overlay = styled(motion.div)`
@@ -149,8 +151,15 @@ function Project() {
                     <img src="img/1.jpg" style={{ width: 600 }} />
                     <br />
                     <br />
-                    <GithubBtn>
-                      <a href="https://github.com/">Github</a>
+                    <GithubBtn
+                      onClick={() =>
+                        window.open(
+                          "https://github.com/kknyapple/portfolio",
+                          "_blank"
+                        )
+                      }
+                    >
+                      Github
                     </GithubBtn>
                   </Content>
                 </Box>
@@ -165,14 +174,14 @@ function Project() {
                   }}
                 >
                   <Content>
-                    👉 포켓몬 도감
+                    👉 포켓몬 도감 (미완성)
                     <br />
                     <br />
                     <img src="img/2.jpg" style={{ width: 600 }} />
                     <br />
                     <br />
-                    <GithubBtn>
-                      <a href="https://github.com/">Github</a>
+                    <GithubBtn onClick={() => window.open("", "_blank")}>
+                      Github
                     </GithubBtn>
                   </Content>
                 </Box>
